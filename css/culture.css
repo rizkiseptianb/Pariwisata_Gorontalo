@@ -1,0 +1,424 @@
+/* Variables */
+:root {
+    --deep-purple: #2D0B59;
+    --royal-purple: #4B0082;
+    --gold: #FFD700;
+    --soft-gold: #E6C068;
+    --ocean-blue: #00AEEF;
+    --sand-white: #F8F5EF;
+    --glass: rgba(255, 255, 255, 0.1);
+    --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #fff 0%, var(--sand-white) 100%);
+    color: #333;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--deep-purple);
+    margin-bottom: 3rem;
+}
+
+.text-center { text-align: center; }
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 15px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.btn-gold {
+    background: var(--gold);
+    color: var(--deep-purple);
+    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.3);
+}
+
+.btn-gold:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(255, 215, 0, 0.4);
+    background: #fff;
+}
+
+.btn-outline {
+    border: 2px solid #fff;
+    color: #fff;
+    margin-left: 15px;
+}
+
+.btn-outline-white {
+    border: 2px solid var(--deep-purple);
+    color: var(--deep-purple);
+    margin-left: 15px;
+}
+
+/* 1. Hero Section */
+.hero {
+    height: 100vh;
+    background: url('../assets/image/culturebg.png') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    position: relative;
+    color: #fff;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(to right, rgba(45, 11, 89, 0.8), rgba(0, 0, 0, 0.2));
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding-left: 10%;  
+    max-width: 800px;
+}
+
+.tagline {
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.hero h1 {
+    font-size: 4.5rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.mouse {
+    width: 25px;
+    height: 40px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    position: relative;
+}
+
+.mouse::before {
+    content: '';
+    width: 5px; height: 5px; background: #fff;
+    position: absolute; left: 50%; top: 10px;
+    transform: translateX(-50%);
+    animation: scroll 2s infinite;
+}
+
+@keyframes scroll {
+    0% { opacity: 1; top: 10px; }
+    100% { opacity: 0; top: 25px; }
+}
+
+/* 2. History Section */
+.history {
+    padding: 100px 0;
+}
+
+.history-grid {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+}
+
+.history-img {
+    flex: 1;
+    position: relative;
+}
+
+.history-img img {
+    width: 90%;
+    border-radius: 20px;
+    position: relative;
+    z-index: 2;
+}/* ===== STYLE UNTUK DESKTOP ===== */
+.img-accent {
+    position: absolute;
+    top: -15px;        /* Naik sedikit ke atas */
+    left: -15px;       /* Maju sedikit ke kiri */
+    right: auto;       /* Reset */
+    bottom: auto;      /* Reset */
+    width: calc(100% + -25px);  /* Lebar = gambar + 15px kiri + 15px kanan */
+    height: calc(100% + 30px); /* Tinggi = gambar + 15px atas + 15px bawah */
+    border: 5px solid var(--gold);
+    border-radius: 20px;
+}
+
+
+
+.history-text { flex: 1; }
+
+.accent-p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--royal-purple);
+    margin-bottom: 2rem;
+}
+
+.timeline {
+    border-left: 2px solid var(--soft-gold);
+    padding-left: 30px;
+}
+
+.timeline-item {
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -39px; top: 0;
+    width: 15px; height: 15px;
+    background: var(--gold);
+    border-radius: 50%;
+}
+
+/* 3. Heritage Section */
+.heritage {
+    padding: 100px 0;
+    background: var(--sand-white);
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.h-card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+    transition: var(--transition);
+}
+
+.h-card:hover { transform: translateY(-10px); }
+
+.card-img {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    top: 15px; right: 15px;
+    background: var(--gold);
+    color: var(--deep-purple);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.card-info { padding: 30px; }
+.card-info h3 { margin-bottom: 1rem; color: var(--deep-purple); }
+
+/* 4. Traditions */
+.traditions { padding: 100px 0; }
+.tradition-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.t-item {
+    text-align: center;
+    padding: 40px 20px;
+    background: #fff;
+    border-radius: 20px;
+    transition: var(--transition);
+}
+
+.t-item:hover { background: var(--deep-purple); color: #fff; }
+.t-icon { font-size: 3rem; margin-bottom: 1rem; }
+
+/* 5. Etiquette */
+.etiquette-box {
+    background: linear-gradient(135deg, var(--deep-purple), var(--royal-purple));
+    padding: 80px 40px;
+    border-radius: 30px;
+    color: #fff;
+}
+
+.etiquette-box .section-title { color: var(--gold); }
+
+.etiquette-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.e-card {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+}
+
+.e-card span { font-size: 2.5rem; display: block; margin-bottom: 1rem; }
+.e-card h5 { font-size: 1.2rem; color: var(--gold); margin-bottom: 10px; }
+
+/* 6. Gallery */
+.masonry {
+    column-count: 3;
+    column-gap: 20px;
+}
+
+.m-item {
+    margin-bottom: 20px;
+    break-inside: avoid;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.m-item img {
+    width: 100%;
+    display: block;
+    transition: var(--transition);
+    cursor: zoom-in;
+}
+
+.m-item img:hover { transform: scale(1.1); }
+
+/* 8. CTA */
+.cta {
+    padding: 120px 0;
+    text-align: center;
+    background: linear-gradient(rgba(255,215,0,0.1), rgba(255,215,0,0.1)), url('https://images.unsplash.com/photo-1596422846543-75c6fc18a593?auto=format&fit=crop&q=80&w=1920') no-repeat center/cover;
+}
+
+.cta h2 { font-size: 3rem; color: var(--deep-purple); margin-bottom: 1.5rem; }
+
+/* 9. Footer */
+footer {
+    background: var(--deep-purple);
+    color: #fff;
+    padding: 80px 0 20px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.f-brand h2 span { color: var(--gold); }
+.f-links a { color: #ccc; text-decoration: none; margin-right: 20px; transition: 0.3s; }
+.f-links a:hover { color: var(--gold); }
+
+/* Back to Top */
+#backToTop {
+    position: fixed;
+    bottom: 30px; right: 30px;
+    width: 50px; height: 50px;
+    background: var(--gold);
+    border: none; border-radius: 50%;
+    cursor: pointer; display: none;
+    z-index: 100;
+}
+
+/* Animations */
+.section-reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 1s ease-out;
+}
+
+.section-reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .hero h1 { font-size: 3rem; }
+    .history-grid { flex-direction: column; gap: 40px; }
+    .card-grid, .tradition-grid, .etiquette-grid { grid-template-columns: repeat(2, 1fr); }
+    .masonry { column-count: 2; }
+}
+
+@media (max-width: 768px) {
+    .card-grid, .tradition-grid, .etiquette-grid, .stats-grid { grid-template-columns: 1fr; flex-direction: column; gap: 30px; }
+    .masonry { column-count: 1; }
+    .hero-content { padding-left: 5%; }
+}
+
+/* Hanya mempengaruhi judul di dalam section gallery */
+.gallery .section-title {
+  padding-top: 70px;
+}
+
+
+@media (max-width: 768px) {
+  .history-img {
+    text-align: center; /* Ini yang bikin gambar ke tengah */
+    margin-bottom: 40px;
+  }
+
+  .history-img img {
+    margin: 0 auto; /* Biar posisinya pas tengah */
+    display: block;
+    max-width: 90%; /* Atur ukuran biar tidak terlalu besar */
+  }
+
+.img-accent {
+     top: -20px !important;
+     left: -1px !important;
+     right: -1px !important;
+     bottom: -20px !important;
+     width: auto !important;
+     height: auto !important;
+     border-width: 4px !important;
+   }
+}

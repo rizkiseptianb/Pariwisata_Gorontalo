@@ -1,0 +1,215 @@
+/* CSS VARIABLES */
+:root {
+    --deep-purple: #2D0B59;
+    --royal-purple: #4B0082;
+    --gold: #FFD700;
+    --soft-gold: #E6C068;
+    --ocean-blue: #00AEEF;
+    --leaf-green: #2E8B57;
+    --sand-white: #F8F5EF;
+    
+    --font-heading: 'Montserrat', 'Poppins', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* RESET & BASE */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--font-body); color: #333; line-height: 1.6; background-color: #fff; overflow-x: hidden; }
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.section-padding { padding: 90px 0; }
+.text-center { text-align: center; }
+.text-gold { color: var(--gold) !important; }
+.text-light { color: #fff; }
+.text-deep-purple { color: var(--deep-purple); }
+.text-ocean { color: var(--ocean-blue); }
+.bg-cream { background-color: var(--sand-white); }
+.mt-20 { margin-top: 20px; } .mt-30 { margin-top: 30px; } .mt-40 { margin-top: 40px; }
+
+h1, h2, h3, h4, h5 { font-family: var(--font-heading); }
+.section-title { font-size: 2.5rem; font-weight: 800; color: var(--deep-purple); margin-bottom: 15px; }
+
+/* GRADIENTS & ORNAMENTS */
+.bg-gradient-purple {
+    background: linear-gradient(135deg, var(--deep-purple) 0%, var(--royal-purple) 100%);
+    position: relative;
+}
+.bg-gradient-purple::after {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background-image: radial-gradient(var(--soft-gold) 1px, transparent 1px);
+    background-size: 40px 40px; opacity: 0.05; pointer-events: none;
+}
+
+/* BUTTONS */
+.btn {
+    padding: 14px 35px; border-radius: 50px; font-weight: 600; font-family: var(--font-body);
+    cursor: pointer; transition: var(--transition); border: none; font-size: 1rem;
+}
+.btn-gold {
+    background: var(--gold); color: var(--deep-purple);
+    box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+}
+.btn-gold:hover { transform: translateY(-3px); box-shadow: 0 8px 25px rgba(255, 215, 0, 0.6); background: #fff; }
+.btn-outline { background: transparent; border: 2px solid #fff; color: #fff; margin-left: 15px; }
+.btn-outline:hover { background: #fff; color: var(--deep-purple); }
+.btn-outline-dark { background: transparent; border: 2px solid var(--deep-purple); color: var(--deep-purple); margin-left: 15px; }
+.btn-outline-dark:hover { background: var(--deep-purple); color: #fff; }
+
+/* 1. HERO SECTION */
+.hero-plan {
+    position: relative; height: 90vh; min-height: 600px;
+    display: flex; align-items: center; justify-content: center;
+    background: url('../assets/image/plan.png') center/cover fixed;
+    color: #fff;
+}
+.hero-overlay { position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(45,11,89,0.7), rgba(0,0,0,0.6)); }
+.hero-content { position: relative; z-index: 2; max-width: 800px; padding: 0 20px; }
+.tagline { color: var(--gold); font-weight: 700; letter-spacing: 2px; text-transform: uppercase; display: block; margin-bottom: 15px; }
+.hero-title { font-size: 4rem; line-height: 1.1; margin-bottom: 20px; }
+.hero-subtitle { font-size: 1.2rem; opacity: 0.9; margin-bottom: 30px; }
+
+/* 2. VISA & FORMS (Glassmorphism) */
+.glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px; padding: 40px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+.bg-cream .glass-card { background: #fff; border: 1px solid #eee; }
+.form-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.input-group label { display: block; font-weight: 600; color: var(--deep-purple); margin-bottom: 8px; }
+.premium-select, .premium-input {
+    width: 100%; padding: 15px; border-radius: 10px; border: 1px solid #ddd;
+    background: #fafafa; font-family: var(--font-body); font-size: 1rem; transition: var(--transition); outline: none;
+}
+.premium-select:focus, .premium-input:focus { border-color: var(--gold); box-shadow: 0 0 10px rgba(255, 215, 0, 0.2); }
+.result-box { margin-top: 30px; padding: 20px; border-radius: 10px; background: rgba(46, 139, 87, 0.1); border-left: 4px solid var(--leaf-green); transition: var(--transition); }
+.result-box.hidden { display: none; }
+.result-box h3 { color: var(--leaf-green); margin-bottom: 5px; }
+
+/* GRIDS & CARDS */
+.grid-4 { 
+    display: grid; 
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 30px; 
+    margin-top: 50px; /* Ini yang akan memberikan jarak ke bawah judul */
+    margin-bottom: 50px; 
+}
+
+.grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+
+.card-modern {
+    background: #fff; padding: 30px 20px; border-radius: 15px; text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: var(--transition); position: relative; border: 1px solid #f0f0f0;
+}
+.card-modern:hover { transform: translateY(-10px); box-shadow: 0 15px 40px rgba(0,0,0,0.1); border-color: var(--soft-gold); }
+.card-icon { font-size: 3rem; margin-bottom: 15px; }
+.card-modern h4 { color: var(--deep-purple); font-size: 1.2rem; margin-bottom: 10px; }
+.card-modern p { color: #666; font-size: 0.95rem; margin-bottom: 15px; }
+.price-badge { display: inline-block; background: var(--sand-white); padding: 5px 15px; border-radius: 20px; font-size: 0.85rem; font-weight: 600; color: var(--royal-purple); }
+
+/* 4 & 5. SPLIT SECTION (Transfer & Currency) */
+.transfer-list { list-style: none; }
+.transfer-list li {
+    display: flex; justify-content: space-between; padding: 15px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1); font-size: 1.05rem;
+}
+.converter-box { display: flex; align-items: center; gap: 15px; }
+.conv-input, .conv-output { flex: 1; position: relative; }
+.sm-select { position: absolute; right: 0; top: 0; width: 80px; height: 100%; border: none; background: transparent; border-left: 1px solid #ddd; border-radius: 0 10px 10px 0; cursor: pointer; }
+.conv-icon { font-size: 1.5rem; color: var(--gold); }
+.bg-readonly { background: #eee; color: #555; }
+.currency-label { position: absolute; right: 15px; top: 50%; transform: translateY(-50%); font-weight: 600; color: #555; }
+
+/* 7. FAQ ACCORDION */
+.faq-container { max-width: 800px; margin: 0 auto; }
+.faq-item { background: #fff; border-radius: 10px; margin-bottom: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.03); overflow: hidden; }
+.faq-header { padding: 20px; font-weight: 600; color: var(--deep-purple); cursor: pointer; display: flex; justify-content: space-between; align-items: center; transition: var(--transition); }
+.faq-header::after { content: '+'; font-size: 1.5rem; color: var(--gold); }
+.faq-item.active .faq-header::after { content: '-'; }
+.faq-content { padding: 0 20px; max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out, padding 0.3s ease; color: #555; }
+.faq-item.active .faq-content { padding: 0 20px 20px; max-height: 200px; }
+
+/* 8. STATS & 9. CTA */
+.stat-box h3 { font-size: 3.5rem; line-height: 1; display: inline-block; }
+.stat-box span { font-size: 2rem; color: var(--gold); }
+.cta-section {
+    padding: 100px 0; position: relative;
+    background: url('https://images.unsplash.com/photo-1596422846543-75c6fc18a593?auto=format&fit=crop&q=80&w=1920') center/cover;
+}
+.cta-overlay { position: absolute; inset: 0; background: rgba(255, 215, 0, 0.85); backdrop-filter: blur(5px); }
+.cta-content { position: relative; z-index: 2; }
+
+/* ANIMATIONS */
+.reveal { opacity: 0; transform: translateY(40px); transition: 0.8s cubic-bezier(0.25, 0.8, 0.25, 1); }
+.reveal.active { opacity: 1; transform: translateY(0); }
+.reveal-load { animation: fadeUp 1s ease forwards; }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+/* RESPONSIVENESS */
+@media (max-width: 992px) {
+    .grid-4 { grid-template-columns: repeat(2, 1fr); }
+    .grid-2 { grid-template-columns: 1fr; }
+    .form-grid { grid-template-columns: 1fr; }
+    .hero-title { font-size: 3.5rem; }
+}
+@media (max-width: 768px) {
+    .grid-4, .grid-3 { grid-template-columns: 1fr; }
+    .hero-title { font-size: 2.8rem; }
+    .section-title { font-size: 2rem; }
+    .hero-btns .btn { display: block; width: 100%; margin: 10px 0 0 0; }
+    .converter-box { flex-direction: column; }
+    .conv-icon { transform: rotate(90deg); }
+    /* Memberikan jarak antara teks deskripsi section dengan konten di bawahnya */
+    .section-header p {
+    margin-bottom: 30px; /* Anda bisa menyesuaikan angka ini (misal: 40px) jika ingin lebih jauh */
+    color: #666; /* Opsional: menyesuaikan warna agar lebih halus */
+}
+}
+
+/* Penyesuaian Tombol Khusus Mobile (HP) */
+@media (max-width: 768px) {
+    .cta-content .hero-btns {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        width: 100%;
+        margin-left: 0 !important;
+    }
+
+    .cta-content .btn {
+        width: 85% !important; /* Memastikan panjang kedua tombol SAMA */
+        max-width: 300px;
+        margin: 0 !important;
+        padding: 12px 0; /* Memberikan tinggi yang nyaman untuk ditekan jari */
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+}
+
+/* WARNA BARU: Build Itinerary (Deep Purple Theme) */
+.btn-gold {
+    background-color: #2D0B59 !important; /* Deep Purple dari tema Anda */
+    color: #FFD700 !important;           /* Teks Emas agar kontras dan mewah */
+    border: 2px solid #FFD700 !important; /* Border Emas yang tegas */
+    transition: all 0.3s ease;
+}
+
+/* WARNA: Contact Travel Help (Agar Tetap Harmonis) */
+.btn-outline-dark {
+    background-color: transparent !important;
+    color: #2D0B59 !important;
+    border: 2px solid #2D0B59 !important;
+}
+
+/* Efek saat tombol ditekan di HP */
+.btn-gold:active {
+    background-color: #FFD700 !important;
+    color: #2D0B59 !important;
+}
