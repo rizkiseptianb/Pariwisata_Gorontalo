@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Things to Do | Wonderful Gorontalo</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/activities.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+
+<div id="navbar-container"></div>
+
+    <section class="hero-activities">
+        <div class="hero-overlay"></div>
+        <div class="hero-content text-center">
+            <span class="tagline">Things To Do - Gorontalo</span>
+            <h1 class="hero-title">Ikuti Agenda Kegiatan<br>Di Setiap Destinasi</h1>
+            <p class="hero-subtitle">Temukan pengalaman tak terlupakan yang disesuaikan dengan gaya perjalanan Anda.</p>
+        </div>
+    </section>
+
+    <section class="experiences-section bg-ornament">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Curated Experiences</h2>
+                <p>Pilih aktivitas berdasarkan minat utama Anda</p>
+            </div>
+
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">All Experiences</button>
+                <button class="filter-btn" data-filter="adventure">Petualangan</button>
+                <button class="filter-btn" data-filter="family">Keluarga</button>
+                <button class="filter-btn" data-filter="romantic">Romantis (Honeymoon)</button>
+                <button class="filter-btn" data-filter="nomad">Ikon Khas</button>
+            </div>
+
+            <div class="experiences-grid" id="experiencesGrid">
+                
+                <div class="experience-card" data-category="romantic adventure">
+                    <div class="card-img" style="background-image: url('assets/image/genep.png');">
+                        <span class="card-badge">Top 1</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Melihat Sunrise di Pulau Saronde</h3>
+                        <p>Sambut pagi dengan kemewahan pulau tropis berpasir putih dan air laut sebening kristal.</p>
+                    </div>
+                </div>
+
+                <div class="experience-card" data-category="adventure family">
+                    <div class="card-img" style="background-image: url('assets/image/whaleshark.png');">
+                        <span class="card-badge">Top 2</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Berenang Bersama Hiu Paus</h3>
+                        <p>Pengalaman magis berinteraksi langsung dengan raksasa lautan yang lembut di perairan Botubarani.</p>
+                    </div>
+                </div>
+
+                <div class="experience-card" data-category="family nomad">
+                    <div class="card-img" style="background-image: url('assets/image/hiji.png');">
+                        <span class="card-badge">Top 3</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Jelajah Sejarah Benteng Otanaha</h3>
+                        <p>Eksplorasi benteng abad ke-16 dengan pemandangan menakjubkan menghadap Danau Limboto.</p>
+                    </div>
+                </div>
+
+                <div class="experience-card" data-category="family romantic">
+                    <div class="card-img" style="background-image: url('assets/image/tekstil.png');">
+                        <span class="card-badge">Top 4</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Kelas Menyulam Kain Karawo</h3>
+                        <p>Pelajari seni tingkat tinggi ukiran benang tradisional Gorontalo langsung dari pengrajin lokal.</p>
+                    </div>
+                </div>
+
+                <div class="experience-card" data-category="family nomad">
+                    <div class="card-img" style="background-image: url('assets/image/binte.png');">
+                        <span class="card-badge">Top 5</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Wisata Kuliner Binte Biluhuta</h3>
+                        <p>Cicipi kehangatan sup jagung tradisional khas Gorontalo yang kaya akan rempah dan hasil laut.</p>
+                    </div>
+                </div>
+
+                <div class="experience-card" data-category="adventure">
+                    <div class="card-img" style="background-image: url('assets/image/waterfall.png');">
+                        <span class="card-badge">Top 6</span>
+                    </div>
+                    <div class="card-content">
+                        <h3>Trekking Air Terjun Lombongo</h3>
+                        <p>Petualangan menyusuri hutan tropis yang rimbun menuju sumber mata air panas dan dingin alami.</p>
+                    </div>
+                </div>
+
+                </div>
+        </div>
+    </section>
+
+    <section class="seasonal-guide">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title text-gold">Seasonal Guide</h2>
+                <p class="text-light">Rencanakan aktivitas terbaik sesuai dengan musim kunjungan Anda.</p>
+            </div>
+            
+            <div class="season-grid">
+                <div class="season-card summer">
+                    <div class="season-icon">☀️</div>
+                    <h3>Musim Kemarau (Mei - Okt)</h3>
+                    <ul class="season-list">
+                        <li>Diving & Snorkeling di kondisi air paling jernih.</li>
+                        <li>Island hopping ke pulau-pulau tropis.</li>
+                        <li>Interaksi optimal dengan Whale Shark.</li>
+                        <li>Fotografi lanskap pesisir.</li>
+                    </ul>
+                </div>
+                
+                <div class="season-card rainy">
+                    <div class="season-icon">🌧️</div>
+                    <h3>Musim Hujan (Nov - Apr)</h3>
+                    <ul class="season-list">
+                        <li>Eksplorasi budaya & kelas memasak *indoor*.</li>
+                        <li>Trekking ke air terjun dengan debit air maksimal.</li>
+                        <li>Wisata kuliner malam menikmati Ilabulo hangat.</li>
+                        <li>Menikmati suasana *cafe* bagi Digital Nomad.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-container"></div>
+    <script src="js/activities.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/footer.js"></script>
+</body>
+</html>

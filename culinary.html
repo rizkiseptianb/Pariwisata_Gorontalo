@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Culinary Guide - Wonderful Gorontalo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Poppins:wght@300;400;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/culinary.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+
+<div id="navbar-container"></div>
+
+    <header class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="tagline">Wonderful Gorontalo - The Heart of Sulawesi</span>
+            <h1 class="hero-title">Taste the Flavor of Gorontalo</h1>
+            <p class="hero-subtitle">Discover authentic dishes, hidden food gems, and unforgettable culinary experiences.</p>
+            <div class="hero-btns">
+                <a href="#dishes" class="btn btn-gold">Explore Dishes</a>
+                <a href="#directory" class="btn btn-outline">Find Restaurants</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="dishes" class="section-padding">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Must-Eat Signature Dishes</h2>
+                <div class="title-accent"></div>
+            </div>
+            <div class="food-grid">
+                <div class="food-card reveal">
+                    <div class="food-img-wrapper">
+                        <img src="assets/image/binte.png" alt="Binte Biluhuta">
+                        <div class="rating">★ 4.9</div>
+                    </div>
+                    <div class="food-info">
+                        <h3>Binte Biluhuta</h3>
+                        <p class="ingredients">Jagung, Udang, Kelapa, Kemangi</p>
+                        <p class="description">Sup jagung khas Gorontalo yang menyegarkan dengan perpaduan rasa manis, asam, dan pedas.</p>
+                    </div>
+                </div>
+                <div class="food-card reveal">
+                    <div class="food-img-wrapper">
+                        <img src="assets/image/ilabulo.png" alt="Ilabulo">
+                        <div class="rating">★ 4.8</div>
+                    </div>
+                    <div class="food-info">
+                        <h3>Ilabulo</h3>
+                        <p class="ingredients">Sagu, Hati Ayam, Rempah-rempah</p>
+                        <p class="description">Makanan legendaris simbol perdamaian, dibungkus daun pisang dan dibakar dengan aroma khas.</p>
+                    </div>
+                </div>
+                <div class="food-card reveal">
+                    <div class="food-img-wrapper">
+                        <img src="assets/image/karawo.png" alt="Kue Karawo">
+                        <div class="rating">★ 5.0</div>
+                    </div>
+                    <div class="food-info">
+                        <h3>Kue Karawo</h3>
+                        <p class="ingredients">Tepung, Mentega, Seni Lukis Gula</p>
+                        <p class="description">Kue kering dengan detail lukisan tangan yang rumit, merepresentasikan seni sulam Karawo.</p>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </section>
+
+
+    </section>
+
+<section id="directory" class="section-padding bg-sand">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Restaurant Directory</h2>
+                <div class="filter-wrapper">
+                    <input type="text" id="foodSearch" placeholder="Search dish or restaurant...">
+                    <div class="filter-tabs">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="seafood">Seafood</button>
+                        <button class="filter-btn" data-filter="street">Street Food</button>
+                        <button class="filter-btn" data-filter="premium">Premium</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="restaurant-grid" id="restaurantGrid">
+                <div class="res-card reveal" data-category="seafood">
+                    <div class="res-img">
+                        <img src="assets/image/resort.png" alt="Saronde Sea Resort">
+                    </div>
+                    <div class="res-content">
+                        <span class="category-tag">Seafood Dining</span>
+                        <h3>Saronde Sea Resort</h3>
+                        <p class="description">Nikmati hidangan laut segar khas pesisir utara dengan pemandangan laut yang memukau.</p>
+                        <div class="res-footer">
+                            <span class="price-rating">$$$ • ★ 4.9</span>
+                            <a href="#" class="btn-text">View Details →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="res-card reveal" data-category="premium">
+                    <div class="res-img">
+                        <img src="assets/image/karawodining.png" alt="Karawo Royal Dining">
+                    </div>
+                    <div class="res-content">
+                        <span class="category-tag">Premium</span>
+                        <h3>Karawo Royal Dining</h3>
+                        <p class="description">Pengalaman fine dining eksklusif dengan sentuhan rempah warisan budaya Gorontalo.</p>
+                        <div class="res-footer">
+                            <span class="price-rating">$$$$ • ★ 5.0</span>
+                            <a href="#" class="btn-text">View Details →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="res-card reveal" data-category="street">
+                    <div class="res-img">
+                        <img src="assets/image/pasar.png" alt="Taruna Night Market">
+                    </div>
+                    <div class="res-content">
+                        <span class="category-tag">Street Food</span>
+                        <h3>Pasar Malam Gorontalo</h3>
+                        <p class="description">Pusat jajanan malam legendaris untuk mencicipi hidangan autentik dengan harga bersahabat.</p>
+                        <div class="res-footer">
+                            <span class="price-rating">$ • ★ 4.7</span>
+                            <a href="#" class="btn-text">View Details →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="res-card reveal" data-category="seafood">
+                    <div class="res-img">
+                        <img src="assets/image/pantairest.png" alt="Restaurant Pantai">
+                    </div>
+                    <div class="res-content">
+                        <span class="category-tag">Seafood</span>
+                        <h3>Restoran Pantai</h3>
+                        <p class="description">Spesialis ikan bakar segar dan Binte Biluhuta langsung dari tangkapan nelayan lokal.</p>
+                        <div class="res-footer">
+                            <span class="price-rating">$$ • ★ 4.8</span>
+                            <a href="#" class="btn-text">View Details →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section">
+        <div class="container stats-grid">
+            <div class="stat-item">
+                <h2 class="counter" data-target="100">0</h2>
+                <p>Culinary Spots</p>
+            </div>
+            <div class="stat-item">
+                <h2 class="counter" data-target="50">0</h2>
+                <p>Local Recipes</p>
+            </div>
+            <div class="stat-item">
+                <h2 class="counter" data-target="24">0</h2>
+                <p>Fresh Seafood Daily</p>
+            </div>
+            <div class="stat-item">
+                <h2 class="counter" data-target="100">0</h2>
+                <p>Authentic Taste %</p>
+            </div>
+        </div>
+    </section>
+
+
+    
+    <div id="footer-container"></div>
+    <script src="js/culinary.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/footer.js"></script>
+    
+</body>
+</html>

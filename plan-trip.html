@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Your Trip | Wonderful Gorontalo</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@700;800&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/plan-trip.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/navbar.css">
+</head>
+<body>
+
+<div id="navbar-container"></div>
+
+    <section class="hero-plan">
+        <div class="hero-overlay"></div>
+        <div class="hero-content text-center reveal-load">
+            <span class="tagline">Wonderful Gorontalo - The Heart of Sulawesi</span>
+            <h1 class="hero-title">Plan Your Perfect Journey</h1>
+            <p class="hero-subtitle">Everything you need before visiting Gorontalo — visa, transport, currency, and connectivity.</p>
+            <div class="hero-btns">
+                <button class="btn btn-gold smooth-scroll" data-target="#visa-section">Start Planning</button>
+                <button class="btn btn-outline smooth-scroll" data-target="#essentials-section">Travel Essentials</button>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+        </div>
+    </section>
+
+    <section id="visa-section" class="visa-section section-padding bg-cream reveal">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Visa Requirement Checker</h2>
+                <p>Ketahui status visa Anda sebelum terbang ke Gorontalo.</p>
+            </div>
+            
+            <div class="glass-card interactive-box">
+                <div class="form-grid">
+                    <div class="input-group">
+                        <label>Select Nationality 🌐</label>
+                        <select id="nationality" class="premium-select">
+                            <option value="asean">ASEAN Countries (SG, MY, TH, etc.)</option>
+                            <option value="voa">US, EU, AUS, JP, KR (90+ Countries)</option>
+                            <option value="evisa">Other Nationalities</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Passport Type 🛂</label>
+                        <select id="passport" class="premium-select">
+                            <option value="ordinary">Ordinary Passport</option>
+                            <option value="diplomatic">Diplomatic / Official</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Length of Stay ⏱️</label>
+                        <select id="stay" class="premium-select">
+                            <option value="short">Up to 30 Days</option>
+                            <option value="long">30 - 60 Days</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="text-center mt-30">
+                    <button id="checkVisaBtn" class="btn btn-gold">Check Visa Status</button>
+                </div>
+                
+                <div id="visa-result" class="result-box hidden">
+                    <h3 id="v-title">Result</h3>
+                    <p id="v-desc">Please check your status above.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="transport-section section-padding reveal">
+        <div class="container">
+            <div class="section-header text-center">
+                <h2 class="section-title">Getting Around Gorontalo</h2>
+                <p>Pilihan transportasi nyaman untuk menjelajahi keindahan Gorontalo.</p>
+            </div>
+            
+            <div class="grid-4 transport-grid">
+                <div class="card-modern">
+                    <div class="card-icon">✈️</div>
+                    <h4>Air Travel</h4>
+                    <p>Djalaluddin Airport (GTO) melayani penerbangan harian dari Jakarta, Bali, dan Makassar.</p>
+                    <span class="price-badge">Start from $80</span>
+                </div>
+                <div class="card-modern">
+                    <div class="card-icon">🚌</div>
+                    <h4>Public Transport</h4>
+                    <p>Gunakan Bentor (Becak Motor) khas Gorontalo, Angkot, atau Bus lokal untuk rute kota.</p>
+                    <span class="price-badge">Start from $1</span>
+                </div>
+                <div class="card-modern">
+                    <div class="card-icon">🚙</div>
+                    <h4>Car Rental</h4>
+                    <p>Sewa mobil harian sangat direkomendasikan. Tersedia opsi lepas kunci atau dengan supir lokal.</p>
+                    <span class="price-badge">Start from $30/day</span>
+                </div>
+                <div class="card-modern">
+                    <div class="card-icon">🚤</div>
+                    <h4>Sea Transport</h4>
+                    <p>Kapal cepat dan perahu tradisional tersedia untuk menyeberang ke Pulau Saronde atau Pulo Cinta.</p>
+                    <span class="price-badge">Varies</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="split-section section-padding bg-gradient-purple text-light reveal">
+        <div class="container">
+            <div class="grid-2">
+                <div class="airport-transfer">
+                    <h2 class="section-title text-gold">Airport Transfer</h2>
+                    <p class="mb-20">Jarak Bandara Djalaluddin ke pusat kota sekitar 45 Menit (30 km).</p>
+                    <ul class="transfer-list">
+                        <li><span>🚕 Airport Taxi</span> <span>Est. Rp 150.000</span></li>
+                        <li><span>🏨 Hotel Pickup</span> <span>Pre-arranged</span></li>
+                        <li><span>🚙 Car Rental Counter</span> <span>Available at Arrival</span></li>
+                        <li><span>🚐 Damri Shuttle</span> <span>Est. Rp 35.000</span></li>
+                    </ul>
+                </div>
+                
+                <div class="currency-converter glass-card">
+                    <h2 class="section-title text-gold" style="font-size: 1.8rem;">Currency & Payments</h2>
+                    <p>Mata uang resmi: <strong>Indonesian Rupiah (IDR)</strong>. Cash dan QRIS (QR Payment) sangat umum digunakan.</p>
+                    
+                    <div class="converter-box mt-20">
+                        <div class="conv-input">
+                            <input type="number" id="amount" value="100" class="premium-input">
+                            <select id="currency-from" class="premium-select sm-select">
+                                <option value="USD">USD</option>
+                                <option value="EUR">EUR</option>
+                                <option value="SGD">SGD</option>
+                                <option value="MYR">MYR</option>
+                            </select>
+                        </div>
+                        <div class="conv-icon">🔄</div>
+                        <div class="conv-output">
+                            <input type="text" id="result-idr" readonly class="premium-input bg-readonly">
+                            <span class="currency-label">IDR</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sim-section section-padding bg-cream reveal">
+        <div class="container">
+            <h2 class="section-title text-center">Stay Connected</h2>
+            <div class="grid-3 mt-40">
+                <div class="card-modern">
+                    <div class="card-icon text-ocean">📱</div>
+                    <h4>Local SIM Options</h4>
+                    <p>Telkomsel memiliki sinyal terkuat hingga ke pulau terluar. Indosat dan XL berfungsi baik di pusat kota.</p>
+                </div>
+                <div class="card-modern">
+                    <div class="card-icon text-ocean">📶</div>
+                    <h4>Wi-Fi Availability</h4>
+                    <p>Wi-Fi gratis tersedia di sebagian besar hotel, resort, bandara, dan cafe modern di pusat kota Gorontalo.</p>
+                </div>
+                <div class="card-modern">
+                    <div class="card-icon text-ocean">📲</div>
+                    <h4>eSIM Tips</h4>
+                    <p>Beli paket Tourist eSIM secara online sebelum kedatangan agar langsung aktif saat mendarat.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="essentials-section" class="essentials-section section-padding reveal">
+        <div class="container">
+            <h2 class="section-title text-center">Travel Essentials</h2>
+            <div class="faq-container mt-40">
+                <div class="faq-item">
+                    <div class="faq-header">☀️ Best Time to Visit & Weather</div>
+                    <div class="faq-content">Gorontalo beriklim tropis (26°C - 32°C). Waktu terbaik berkunjung adalah musim kemarau antara Mei hingga Oktober untuk aktivitas laut yang optimal.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-header">🗣️ Language Basics</div>
+                    <div class="faq-content">Bahasa Indonesia digunakan secara luas. Beberapa kata lokal: "Oto" (Mobil), "Pe" (Punya), dan sapaan senyum sangat dihargai.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-header">🎒 What to Pack</div>
+                    <div class="faq-content">Pakaian ringan menyerap keringat, tabir surya (sunblock) ramah terumbu karang, pakaian tertutup/sopan untuk kunjungan budaya, dan obat-obatan pribadi.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-header">🚑 Safety & Emergency</div>
+                    <div class="faq-content">Gorontalo sangat aman. Darurat: Polisi (110), Ambulans (118), Basarnas Gorontalo siap siaga untuk wisata laut.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section bg-gradient-purple text-light section-padding reveal">
+        <div class="container">
+            <div class="grid-4 text-center">
+                <div class="stat-box">
+                    <h3 class="counter text-gold" data-target="50">0</h3><span>+</span>
+                    <p>Destinations</p>
+                </div>
+                <div class="stat-box">
+                    <h3 class="counter text-gold" data-target="1">0</h3>
+                    <p>Main Airport (GTO)</p>
+                </div>
+                <div class="stat-box">
+                    <h3 class="counter text-gold" data-target="28">0</h3><span>°C</span>
+                    <p>Average Tropical Climate</p>
+                </div>
+                <div class="stat-box">
+                    <h3 class="text-gold">100%</h3>
+                    <p>Friendly Local Culture</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section text-center reveal">
+        <div class="cta-overlay"></div>
+        <div class="cta-content">
+            <h2 class="section-title text-deep-purple">Ready to Explore Gorontalo?</h2>
+            <p>Jadikan impian liburan Anda menjadi kenyataan sekarang juga.</p>
+            <div class="hero-btns mt-30">
+                <button class="btn btn-gold">Build Itinerary</button>
+                <button class="btn btn-outline-dark">Contact Travel Help</button>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-container"></div>
+    <script src="js/plan-trip.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/navbar.js"></script>
+</body>
+</html>

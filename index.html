@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wonderful Gorontalo - The Heart of Sulawesi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/navbar.css">
+</head>
+<body>
+
+<div id="navbar-container"></div>
+
+    <header id="home" class="hero">
+        <div class="video-overlay"></div>
+        <video autoplay muted loop class="hero-video" 
+            <source src="assets/video/hero-bg.mp4" type="video/mp4">
+        </video>
+        <div class="hero-content reveal">
+            <p class="tagline">Wonderful Gorontalo - The Heart of Sulawesi</p>
+            <h1>Explore the Beauty <br> of Gorontalo</h1>
+            <p class="description">Discover paradise islands, rich culture, delicious culinary, and unforgettable adventure.</p>
+            <div class="hero-btns">
+                <a href="#destinations" class="btn btn-primary">Explore Now</a>
+                <a href="#" class="btn btn-outline"><i class="fas fa-play"></i> Watch Video</a>
+            </div>
+        </div>
+    </header>
+
+<section id="search-section" class="search-section">
+    <div class="container">
+        <div class="search-container glassmorphism reveal">
+            <form id="searchForm" class="search-form">
+                <div class="input-group">
+                    <label for="interestSelect">Destination Interest</label>
+                    <select id="interestSelect">
+                        <option value="beach">Beach & Island</option>
+                        <option value="culture">Culture & Heritage</option>
+                        <option value="culinary">Culinary</option>
+                        <option value="adventure">Adventure</option>
+                    </select>
+                </div>
+                
+                <div class="input-group">
+                    <label for="travelerSelect">Travelers</label>
+                    <select id="travelerSelect">
+                        <option value="single">Single Traveler</option>
+                        <option value="couple">Couple</option>
+                        <option value="family">Family (3-5 People)</option>
+                        <option value="group">Large Group (6+)</option>
+                    </select>
+                </div>
+
+                <button type="button" class="btn btn-primary search-btn" id="submitSearch">
+                    <i class="fas fa-search"></i> Search
+                </button>
+            </form>
+        </div>
+    </div>
+</section>
+
+    <section id="destinations" class="section">
+        <div class="section-title reveal">
+            <h2>Top Destinations</h2>
+            <p>Experience the most breathtaking places in Gorontalo</p>
+        </div>
+        <div class="grid-container">
+            <div class="card reveal">
+                <div class="card-img" style="background-image: url('assets/image/island.png');"></div>
+                <div class="card-content">
+                    <div class="rating"><i class="fas fa-star"></i> 4.9</div>
+                    <h3>Pulau Saronde</h3>
+                    <p>White sandy beaches and crystal clear waters perfect for a tropical escape.</p>
+                    <a href="#" class="explore-link">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="card reveal" style="transition-delay: 0.1s;">
+                <div class="card-img" style="background-image: url('assets/image/hiji.png');"></div>
+                <div class="card-content">
+                    <div class="rating"><i class="fas fa-star"></i> 4.7</div>
+                    <h3>Benteng Otanaha</h3>
+                    <p>Historic fortress with stunning views of Lake Limboto.</p>
+                    <a href="#" class="explore-link">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="card reveal" style="transition-delay: 0.2s;">
+                <div class="card-img" style="background-image: url('assets/image/whaleshark.png');"></div>
+                <div class="card-content">
+                    <div class="rating"><i class="fas fa-star"></i> 5.0</div>
+                    <h3>Whale Shark Point</h3>
+                    <p>Swim alongside the magnificent and gentle whale sharks in Botubarani.</p>
+                    <a href="#" class="explore-link">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="card reveal" style="transition-delay: 0.3s;">
+                <div class="card-img" style="background-image: url('assets/image/waterfall.png');"></div>
+                <div class="card-content">
+                    <div class="rating"><i class="fas fa-star"></i> 4.6</div>
+                    <h3>Air Terjun Lombongo</h3>
+                    <p>Refreshing hot and cold springs surrounded by lush rainforest.</p>
+                    <a href="#" class="explore-link">Explore <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="events" class="section bg-light">
+        <div class="section-title reveal">
+            <h2>Upcoming Festivals & Events</h2>
+            <p>Celebrate life and culture with locals</p>
+        </div>
+        <div class="event-showcase glassmorphism reveal">
+            <div class="event-info">
+                <h3>Festival Karawo</h3>
+                <p>The biggest celebration of traditional Gorontalo embroidery art featuring fashion shows, cultural performances, and local exhibitions.</p>
+                <div class="countdown" id="countdown">
+                    <div class="time-box"><h4 id="days">00</h4><span>Days</span></div>
+                    <div class="time-box"><h4 id="hours">00</h4><span>Hours</span></div>
+                    <div class="time-box"><h4 id="minutes">00</h4><span>Mins</span></div>
+                    <div class="time-box"><h4 id="seconds">00</h4><span>Secs</span></div>
+                </div>
+                <a href="#" class="btn btn-primary">Get Tickets</a>
+            </div>
+            <div class="event-list">
+                <div class="event-item">
+                    <div class="date"><span>15</span> Aug</div>
+                    <div class="details">
+                        <h4>Gorontalo Carnival</h4>
+                        <p>Pohuwato Regency</p>
+                    </div>
+                </div>
+                <div class="event-item">
+                    <div class="date"><span>02</span> Sep</div>
+                    <div class="details">
+                        <h4>Music Beach Festival</h4>
+                        <p>Boalemo</p>
+                    </div>
+                </div>
+                <div class="event-item">
+                    <div class="date"><span>10</span> Oct</div>
+                    <div class="details">
+                        <h4>Cultural Parade</h4>
+                        <p>Gorontalo City</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="culture" class="section">
+        <div class="section-title reveal">
+            <h2>Rich Cultural Heritage</h2>
+            <p>Immerse yourself in centuries of traditions</p>
+        </div>
+        <div class="grid-container">
+            <div class="culture-card reveal">
+                <img src="assets/image/dulohupa.png" alt="Rumah Adat Dulohupa">
+                <div class="culture-overlay">
+                    <h3>Rumah Adat Dulohupa</h3>
+                </div>
+            </div>
+            <div class="culture-card reveal" style="transition-delay: 0.1s;">
+                <img src="assets/image/tari.png" alt="Tarian Saronde">
+                <div class="culture-overlay">
+                    <h3>Tarian Saronde</h3>
+                </div>
+            </div>
+            <div class="culture-card reveal" style="transition-delay: 0.2s;">
+                <img src="assets/image/kain.png" alt="Kain Karawo">
+                <div class="culture-overlay">
+                    <h3>Kain Karawo</h3>
+                </div>
+            </div>
+            <div class="culture-card reveal" style="transition-delay: 0.3s;">
+                <img src="assets/image/budaya.png" alt="Tradisi Lokal">
+                <div class="culture-overlay">
+                    <h3>Tradisi Lokal</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="culinary" class="section bg-light">
+        <div class="section-title reveal">
+            <h2>Taste of Gorontalo</h2>
+            <p>A journey of flavors and spices</p>
+        </div>
+        <div class="grid-container">
+            <div class="food-card reveal">
+                <img src="assets/image/sup.png" alt="Binte Biluhuta">
+                <div class="food-info">
+                    <h3>Binte Biluhuta</h3>
+                    <p>Traditional corn soup mixed with fish, shrimp, and aromatic local spices.</p>
+                    <a href="#" class="btn-text">See Recipe <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="food-card reveal" style="transition-delay: 0.1s;">
+                <img src="assets/image/ilabulo.png" alt="Ilabulo">
+                <div class="food-info">
+                    <h3>Ilabulo</h3>
+                    <p>Savory sago and chicken liver wrapped in banana leaves and grilled to perfection.</p>
+                    <a href="#" class="btn-text">See Recipe <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="food-card reveal" style="transition-delay: 0.2s;">
+                <img src="assets/image/karawo.png" alt="Kue Karawo">
+                <div class="food-info">
+                    <h3>Kue Karawo</h3>
+                    <p>Beautifully decorated cookies featuring intricate icing designs like traditional embroidery.</p>
+                    <a href="#" class="btn-text">See Recipe <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="stats" class="section stats-section">
+        <div class="stat-container reveal">
+            <div class="stat-box">
+                <i class="fas fa-map-marked-alt"></i>
+                <h3 class="counter" data-target="50">0</h3>
+                <p>Destinations</p>
+            </div>
+            <div class="stat-box">
+                <i class="fas fa-monument"></i>
+                <h3 class="counter" data-target="20">0</h3>
+                <p>Cultural Heritage</p>
+            </div>
+            <div class="stat-box">
+                <i class="fas fa-users"></i>
+                <h3><span class="counter" data-target="100">0</span>K+</h3>
+                <p>Yearly Visitors</p>
+            </div>
+            <div class="stat-box">
+                <i class="fas fa-sun"></i>
+                <h3 class="counter" data-target="365">0</h3>
+                <p>Days Adventure</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="social" class="section">
+        <div class="section-title reveal">
+            <h2>Traveler Stories</h2>
+            <p>Share your moments using #WonderfulGorontalo</p>
+        </div>
+        <div class="ig-grid reveal">
+            <div class="ig-post">
+                <img src="assets/image/otanaha.png" alt="Travel">
+                <div class="ig-overlay">
+                    <span><i class="fas fa-heart"></i> 1.2k</span>
+                    <span><i class="fas fa-comment"></i> 45</span>
+                </div>
+            </div>
+            <div class="ig-post">
+                <img src="assets/image/opat.png" alt="Travel">
+                <div class="ig-overlay">
+                    <span><i class="fas fa-heart"></i> 890</span>
+                    <span><i class="fas fa-comment"></i> 20</span>
+                </div>
+            </div>
+            <div class="ig-post">
+                <img src="assets/image/limboto.png" alt="Travel">
+                <div class="ig-overlay">
+                    <span><i class="fas fa-heart"></i> 2.4k</span>
+                    <span><i class="fas fa-comment"></i> 110</span>
+                </div>
+            </div>
+            <div class="ig-post">
+                <img src="assets/image/lima.png" alt="Travel">
+                <div class="ig-overlay">
+                    <span><i class="fas fa-heart"></i> 560</span>
+                    <span><i class="fas fa-comment"></i> 15</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div id="footer-container"></div>
+    <script src="js/script.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/navbar.js"></script>
+    
+    <style>
+    /* Mencari elemen yang posisinya melayang dan berisi panah, lalu menghapusnya */
+    [class*="back-to-top"], [class*="scroll-up"], .fa-chevron-up {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+    }
+</style>
+    
+</body>
+</html>

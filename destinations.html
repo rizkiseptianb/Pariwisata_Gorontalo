@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destinations | Wonderful Gorontalo</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@400;700;800&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/destinations.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+
+<div id="navbar-container"></div>
+
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-bg" style="background-image: url('assets/image/destinasi.png');"></div>
+        <div class="hero-content reveal">
+            <span class="tagline">Destinasi Gorontalo</span>
+            <h1 class="hero-title">Jelajahi Setiap Sudut Keindahan<br>Gorontalo</h1>
+            <p class="hero-subtext">Kunjungi Pulau Tropis, Situs Sejarah, Area Perkotaan dan Wisata Alam Gorontalo</p>
+            <div class="hero-buttons">
+                <a href="#map-section" class="btn btn-gold-glow">Explore Map</a>
+                <a href="#featured" class="btn btn-outline-light">Travel Guide</a>
+            </div>
+        </div>
+    </section>
+
+<section id="map-section" class="map-section section-padding">
+    <div class="container text-center reveal">
+        <h2 class="section-title text-center" style="margin-bottom: 30px !important; padding-bottom: 20px !important;">Interactive Map Region Of Gorontalo</h2>
+        
+        <div class="map-container">
+            <!-- Ganti SVG dengan Embed Google Maps Responsive -->
+            <div class="map-responsive">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127126.20162011113!2d123.0402235!3d0.54344555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2db247fcd05e059f%3A0x4030bfbca5c04e0!2sGorontalo!5e0!3m2!1sid!2sid!4v1713865244563!5m2!1sid!2sid" 
+                    width="600" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        <div id="region-popup" class="popup-overlay">
+            <div class="popup-content glassmorphism">
+                <button id="close-popup" class="close-btn">&times;</button>
+                <h3 id="popup-title">Region Name</h3>
+                <img id="popup-img" src="" alt="Region Photo" class="popup-image">
+                <ul class="popup-details">
+                    <li><strong>Top Attraction:</strong> <span id="popup-attraction"></span></li>
+                    <li><strong>Best Activity:</strong> <span id="popup-activity"></span></li>
+                    <li><strong>Distance:</strong> <span id="popup-distance"></span></li>
+                </ul>
+                <button class="btn btn-gold-glow w-100">Plan Visit</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="region-categories section-padding bg-pattern">
+        <div class="container reveal">
+        <h2 class="section-title text-center" style="margin-bottom: 30px !important; padding-bottom: 20px !important;">Explore by Region Character</h2>
+
+            
+            <div class="grid-3">
+                <div class="premium-card">
+                    <div class="card-img" style="background-image: url('assets/image/island.png');"></div>
+                    <div class="card-content">
+                        <div class="card-icon"></div>
+                        <h3>Pulau Saronde</h3>
+                        <p>Nikmati Keindahan Di Pantai Pasir Putih Ikonik</p>
+                        <span class="highlight-text">Iconic: Saronde Island</span>
+                    </div>
+                </div>
+                <div class="premium-card">
+                    <div class="card-img" style="background-image: url('assets/image/otanaha.png');"></div>
+                    <div class="card-content">
+                        <div class="card-icon">️</div>
+                        <h3>Benteng Otanaha</h3>
+                        <p>Situs Sejarah Gorontalo</p>
+                        <span class="highlight-text">Iconic: Otanaha Temple</span>
+                    </div>
+                </div>
+                <div class="premium-card">
+                    <div class="card-img" style="background-image: url('assets/image/limboto.png');"></div>
+                    <div class="card-content">
+                        <div class="card-icon">️</div>
+                        <h3>Danau Limboto</h3>
+                        <p>Pusat Perekonomian Dan Wisata Serta Kuliner Olahan Ikan Gorontalo</p>
+                        <span class="highlight-text">Iconic: Limboto</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="featured" class="featured-destinations section-padding">
+        <div class="container reveal">
+        <h2 class="section-title text-center" style="margin-bottom: 30px !important; padding-bottom: 20px !important;">Wajib Anda Kunjungi</h2>
+            
+            <div class="grid-4">
+                <div class="destination-card">
+                    <img src="assets/image/opat.png" alt="Pulau Saronde">
+                    <div class="dest-info">
+                        <h4>Pulau Saronde</h4>
+                        <div class="rating">⭐⭐⭐⭐⭐ (4.9)</div>
+                        <p>Pantai Pasir Putih Layaknya Kristal Putih Yang Indah</p>
+                        <a href="#" class="btn btn-outline-gold">Explore</a>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img src="assets/image/tilu.png" alt="Benteng Otanaha">
+                    <div class="dest-info">
+                        <h4>Benteng Otanaha</h4>
+                        <div class="rating">⭐⭐⭐⭐ (4.7)</div>
+                        <p>Situs Sejarah Benteng Pertahanan Raja Ilato Kerajaan Gorontalo</p>
+                        <a href="#" class="btn btn-outline-gold">Explore</a>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img src="assets/image/shark.png" alt="Whale Shark Botubarani">
+                    <div class="dest-info">
+                        <h4>Whale Shark Point</h4>
+                        <div class="rating">⭐⭐⭐⭐⭐ (4.8)</div>
+                        <p>Pengalaman Berenang dan Berfoto Bersama Hiu Paus</p>
+                        <a href="#" class="btn btn-outline-gold">Explore</a>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <img src="assets/image/waterfall.png" alt="Air Terjun Lombongo">
+                    <div class="dest-info">
+                        <h4>Air Terjun Lombongo</h4>
+                        <div class="rating">⭐⭐⭐⭐ (4.6)</div>
+                        <p>Air Terjun Dengan Spot Foto Estetik dan Asri</p>
+                        <a href="#" class="btn btn-outline-gold">Explore</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="quick-facts section-padding bg-pattern">
+        <div class="container reveal">
+        <h2 class="section-title text-center" style="margin-bottom: 30px !important; padding-bottom: 20px !important;">Travel Quick Factsr</h2>
+            
+            <div class="table-container glassmorphism">
+                <table class="modern-table">
+                    <thead>
+                        <tr>
+                            <th> Rute</th>
+                            <th> Jarak</th>
+                            <th> Dengan Mobil</th>
+                            <th> Dengan Pesawat</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Bandara &rarr; Pusat Kota</td>
+                            <td>30 km</td>
+                            <td>45 menit</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Pusat Kota &rarr; Pulau Saronde </td>
+                            <td>65 km</td>
+                            <td>2 jam</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Pusat Kota &rarr; Benteng Otanaha</td>
+                            <td>8 km</td>
+                            <td>20 menit</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Jakarta &rarr; Gorontalo</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>3 jam</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section text-center reveal">
+        <div class="container">
+        <h2 class="section-title text-center" style="margin-bottom: 10px !important; padding-bottom: 20px !important;">Ready To Explore Gorontalo</h2>
+            <p class="cta-subtitle">Let us help you craft the perfect journey to the Heart of Sulawesi.</p>
+            <div class="hero-buttons" style="justify-content: center;">
+                <a href="#" class="btn btn-gold-glow">Build Itinerary</a>
+                <a href="#" class="btn btn-outline-light">Contact Guide</a>
+            </div>
+        </div>
+    </section>
+    
+<div id="footer-container"></div>
+
+    <script src="js/destinations.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/footer.js"></script>
+</body>
+</html>
