@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Where to Stay | Wonderful Gorontalo</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@700;800&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/hotels.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/navbar.css">
+</head>
+<body>
+
+<div id="navbar-container"></div>
+
+    <section class="hero-hotel">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="tagline">Wonderful Gorontalo - The Heart of Sulawesi</span>
+            <h1 class="hero-title">Find Your Perfect Stay</h1>
+            <p class="hero-subtitle">From luxury resorts to authentic homestays, discover where comfort meets paradise.</p>
+            <div class="hero-btns">
+                <button class="btn btn-gold smooth-scroll" data-target="#featured-hotels">Explore Stays</button>
+                <button class="btn btn-outline smooth-scroll" data-target="#smart-finder">Book Inspiration</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="smart-finder" class="section bg-cream">
+        <div class="container">
+            <div class="finder-box">
+                <div class="grid-4">
+                    <div class="input-group">
+                        <label>Budget Range</label>
+                        <select id="sf-budget" class="premium-select">
+                            <option value="all">All Budgets</option>
+                            <option value="low">Budget Friendly</option>
+                            <option value="mid">Mid-Range</option>
+                            <option value="high">Luxury</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Preferred Area</label>
+                        <select id="sf-area" class="premium-select">
+                            <option value="all">All Areas</option>
+                            <option value="island">Islands</option>
+                            <option value="city">City Center</option>
+                            <option value="nature">Nature / Parks</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Stay Type</label>
+                        <select id="sf-type" class="premium-select">
+                            <option value="all">All Types</option>
+                            <option value="resort">Resorts</option>
+                            <option value="hotel">Hotels</option>
+                            <option value="homestay">Homestays</option>
+                        </select>
+                    </div>
+                    <div class="btn-align">
+                        <button id="btn-search-stay" class="btn btn-deep w-100">Find My Stay</button>
+                    </div>
+                </div>
+            </div>
+            <div id="finder-results" class="hotel-grid mt-40 hidden"></div>
+        </div>
+    </section>
+
+    <section id="featured-hotels" class="section">
+        <div class="container">
+            <div class="section-header text-center reveal">
+                <h2 class="text-deep-purple">Our Featured Collections</h2>
+                <p>Hand-picked accommodations for an unforgettable journey.</p>
+            </div>
+            <div class="grid-3 mt-40">
+                <div class="type-card reveal">
+                    <div class="type-img" style="background-image: url('assets/image/hotel.png');"></div>
+                    <div class="type-content">
+                        <h3>Luxury Resorts</h3>
+                        <p>Experience world-class service on private islands.</p>
+                    </div>
+                </div>
+                <div class="type-card reveal">
+                    <div class="type-img" style="background-image: url('assets/image/resort.png');"></div>
+                    <div class="type-content">
+                        <h3>Boutique Hotels</h3>
+                        <p>Modern comfort in the heart of the city.</p>
+                    </div>
+                </div>
+                <div class="type-card reveal">
+                    <div class="type-img" style="background-image: url('assets/image/eco.png');"></div>
+                    <div class="type-content">
+                        <h3>Eco Homestays</h3>
+                        <p>Connect with local culture and nature.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div id="footer-container"></div>
+    <script src="js/hotels.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/navbar.js"></script>
+</body>
+</html>

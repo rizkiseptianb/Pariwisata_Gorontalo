@@ -1,0 +1,173 @@
+/* =====================================
+   VARIABLES & RESET
+===================================== */
+:root {
+    --purple: #2D0B59;
+    --purple2: #4B0082;
+    --gold: #FFD700;
+    --gold2: #E6C068;
+    --white: #ffffff;
+    --light: #f8f5ef;
+    --dark: #111111;
+    --gray: #777;
+    --shadow: 0 10px 30px rgba(0,0,0,.08);
+    --radius: 18px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; background: #fff; color: #222; overflow-x: hidden; }
+.container { width: 100%; max-width: 1200px; margin: auto; padding: 0 20px; }
+.section { padding: 90px 0; }
+.text-center { text-align: center; }
+.text-deep-purple { color: var(--purple); }
+.bg-cream { background: var(--light); }
+.hidden { display: none; }
+.mt-40 { margin-top: 40px; }
+
+/* =====================================
+   HERO SECTION FIX
+===================================== */
+.hero-hotel {
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    background: url('../assets/image/pantairest.png') center/cover no-repeat;
+}
+.hero-overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.5); }
+.hero-content { position: relative; z-index: 2; padding: 0 20px; }
+.tagline { display: block; font-weight: 600; color: var(--gold); letter-spacing: 2px; margin-bottom: 15px; }
+.hero-title { font-size: clamp(2.5rem, 8vw, 4.5rem); font-family: 'Montserrat', sans-serif; line-height: 1.1; margin-bottom: 20px; }
+.hero-subtitle { font-size: 1.2rem; max-width: 700px; margin: 0 auto 35px; opacity: 0.9; }
+
+/* =====================================
+   BUTTONS
+===================================== */
+.btn { padding: 16px 32px; border-radius: 50px; font-weight: 700; cursor: pointer; transition: .3s; display: inline-block; text-decoration: none; border: none; font-family: 'Poppins', sans-serif; }
+.btn-gold { background: var(--gold); color: var(--purple); }
+.btn-outline { background: transparent; border: 2px solid #fff; color: #fff; margin-left: 10px; }
+.btn-deep { background: var(--purple); color: #fff; width: 100%; }
+
+/* =====================================
+   SMART FINDER
+===================================== */
+.finder-box { background: #fff; padding: 40px; border-radius: var(--radius); box-shadow: var(--shadow); margin-top: -150px; position: relative; z-index: 10; }
+.grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+.input-group label { display: block; margin-bottom: 8px; font-weight: 600; color: var(--purple); }
+.premium-select { width: 100%; padding: 12px; border-radius: 10px; border: 1px solid #ddd; background: #f9f9f9; }
+
+/* =====================================
+   CARDS
+===================================== */
+.grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.type-card { background: #fff; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); transition: .3s; }
+.type-card:hover { transform: translateY(-10px); }
+.type-img { height: 250px; background-size: cover; background-position: center; }
+.type-content { padding: 25px; text-align: center; }
+.type-content h3 { color: var(--purple); margin-bottom: 10px; }
+
+/* =====================================
+   FOOTER
+===================================== */
+.footer-hotel { background: var(--purple); color: #fff; padding: 60px 0 30px; }
+.footer-brand h2 span { color: var(--gold); }
+.footer-links a, .footer-social a { display: block; color: #ccc; margin-bottom: 10px; text-decoration: none; }
+.copyright { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; }
+
+/* =====================================
+   ANIMATIONS & MOBILE
+===================================== */
+.reveal { opacity: 0; transform: translateY(30px); transition: 0.8s all ease; }
+.reveal.show { opacity: 1; transform: translateY(0); }
+
+#backToTop { position: fixed; bottom: 20px; right: 20px; background: var(--gold); border: none; width: 50px; height: 50px; border-radius: 50%; cursor: pointer; opacity: 0; transition: .3s; }
+#backToTop.show { opacity: 1; }
+
+/* =====================================
+   MOBILE RESPONSIVENESS FIX
+===================================== */
+@media (max-width: 768px) {
+    /* Memberikan jarak antar kartu hotel agar tidak menempel */
+    .hotel-card, .type-card, .view-card {
+        margin-bottom: 25px; /* Jarak bawah setiap tempat */
+        display: block;      /* Memastikan elemen mengambil ruang penuh */
+    }
+
+    /* Menghilangkan margin pada kartu terakhir agar tidak ada ruang kosong berlebih di bawah */
+    .hotel-grid > div:last-child, 
+    .grid-3 > div:last-child {
+        margin-bottom: 0;
+    }
+
+    /* Penyesuaian padding section di HP agar tidak terlalu sesak */
+    .section {
+        padding: 50px 0;
+    }
+
+    /* Memastikan container hasil pencarian memiliki jarak yang rapi */
+    #finder-results {
+        gap: 0; /* Kita menggunakan margin-bottom pada kartu sebagai gantinya */
+    }
+}
+
+/* Perbaikan Jarak Antar Kartu di HP */
+@media (max-width: 768px) {
+    /* Mengatur container agar kartu menumpuk satu per satu */
+    #finder-results, .grid-3, .hotel-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 0; /* Kita gunakan margin agar lebih stabil */
+    }
+
+    /* Memberikan jarak bawah pada setiap kartu hotel */
+    .hotel-card {
+        margin-bottom: 25px !important; /* Jarak antar tempat */
+        width: 100%;
+        display: block;
+    }
+
+    /* Memberikan jarak pada box hasil pencarian agar tidak menempel dengan footer/tombol */
+    #finder-results {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-header {
+        margin-bottom: 40px !important;
+        padding: 0 10px;
+    }
+    
+    .section-header h2 {
+        margin-bottom: 15px; /* Jarak antara judul h2 dengan sub-teks di bawahnya */
+    }
+}
+
+/* =====================================
+   FIX TAGLINE TEXT SIZE
+===================================== */
+
+.tagline {
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1rem;          /* Ukuran teks yang lebih proporsional */
+    font-weight: 600;           /* Membuatnya sedikit lebih tebal agar terbaca */
+    text-transform: uppercase;  /* Membuatnya menjadi huruf kapital semua agar rapi */
+    letter-spacing: 3px;        /* Memberikan jarak antar huruf agar terkesan mewah */
+    color: var(--gold);         /* Memastikan tetap berwarna emas */
+    margin-bottom: 20px;        /* Jarak ke judul utama di bawahnya */
+}
+
+/* Penyesuaian untuk layar HP */
+@media (max-width: 768px) {
+    .tagline {
+        font-size: 1rem;      /* Ukuran sedikit lebih kecil di HP agar tidak patah baris */
+        letter-spacing: 2px;     /* Jarak huruf sedikit dikurangi untuk layar sempit */
+        margin-bottom: 15px;
+    }
+}

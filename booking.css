@@ -1,0 +1,125 @@
+/* VARIABLES */
+:root {
+    --deep-purple: #2D0B59;
+    --royal-purple: #4B0082;
+    --gold: #FFD700;
+    --soft-gold: #E6C068;
+    --ocean-blue: #00AEEF;
+    --leaf-green: #2E8B57;
+    --sand-white: #F8F5EF;
+    --glass: rgba(255, 255, 255, 0.9);
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* BASE */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Inter', sans-serif; color: #333; line-height: 1.6; background: var(--sand-white); }
+h1, h2, h3 { font-family: 'Montserrat', sans-serif; }
+
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.section-padding { padding: 80px 0; }
+.text-center { text-align: center; }
+.mt-20 { margin-top: 20px; } .mt-30 { margin-top: 30px; }
+.hidden { display: none !important; }
+
+/* GRADIENT BACKGROUND WITH ORNAMENT */
+.bg-pattern {
+    background: linear-gradient(135deg, #f5f0ff 0%, #ffffff 100%);
+    position: relative;
+    overflow: hidden;
+}
+.bg-pattern::before {
+    content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMiIgZmlsbD0iIzREMDA4MiIgZmlsbC1vcGFjaXR5PSIwLjA1Ii8+PC9zdmc+');
+    pointer-events: none;
+}
+
+/* 1. HERO */
+.hero-booking {
+    position: relative; height: 70vh; display: flex; align-items: center; justify-content: center; text-align: center;
+    background: url('../assets/image/booking.png') center/cover no-repeat; color: #fff;
+}
+.hero-overlay { position: absolute; inset: 0; background: rgba(45, 11, 89, 0.6); }
+.hero-content { position: relative; z-index: 2; max-width: 800px; padding: 20px; }
+.hero-title { font-size: 3.5rem; margin-bottom: 15px; }
+.tagline { color: var(--gold); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; display: block; margin-bottom: 10px; }
+.hero-btns {
+    margin-top: 40px; /* Ubah angka ini sesuai keinginan (30px - 50px biasanya ideal) */
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Jika ada dua tombol, ini memberi jarak antar tombolnya */
+}
+
+/* GLASS CARD */
+.glass-card { background: var(--glass); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.5); border-radius: 20px; padding: 40px; box-shadow: 0 15px 35px rgba(0,0,0,0.05); }
+
+/* BOOKING GRID */
+.booking-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 30px; }
+
+/* FORMS */
+.form-group-title { font-size: 1.2rem; font-weight: 700; color: var(--deep-purple); margin: 30px 0 20px; border-left: 4px solid var(--gold); padding-left: 15px; }
+.input-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.input-group { display: flex; flex-direction: column; margin-bottom: 15px; }
+
+/* Khusus untuk kotak Check-in dan Check-out */
+.input-group input[type="date"] {
+    width: 100%;             /* Memastikan panjangnya penuh sesuai kolom */
+    box-sizing: border-box;  /* Memastikan padding tidak merusak lebar */
+    display: block;          /* Menghilangkan perilaku inline default */
+    min-height: 46px;        /* Menyamakan tinggi dengan kotak select/text agar seragam */
+}
+
+.input-group label { font-weight: 600; font-size: 0.9rem; margin-bottom: 8px; color: #555; }
+.input-group input, .input-group select, .input-group textarea {
+    padding: 12px 15px; border-radius: 10px; border: 1.5px solid #ddd; font-family: inherit; font-size: 1rem; transition: var(--transition);
+}
+.input-group input:focus { outline: none; border-color: var(--gold); box-shadow: 0 0 10px rgba(255, 215, 0, 0.2); }
+.full-width { grid-column: 1 / -1; }
+
+/* PAYMENT */
+.payment-grid { display: flex; gap: 15px; flex-wrap: wrap; }
+.payment-option { flex: 1; cursor: pointer; }
+.payment-option input { display: none; }
+.pay-box { display: block; padding: 15px; border: 1.5px solid #ddd; border-radius: 12px; text-align: center; transition: var(--transition); font-weight: 600; }
+.payment-option input:checked + .pay-box { border-color: var(--gold); background: #fffdf0; color: var(--deep-purple); box-shadow: 0 5px 15px rgba(255,215,0,0.2); }
+
+/* BUTTONS */
+.btn { padding: 15px 35px; border-radius: 50px; border: none; font-weight: 700; cursor: pointer; transition: var(--transition); text-transform: uppercase; font-family: 'Poppins', sans-serif; }
+.btn-gold { background: var(--gold); color: var(--deep-purple); box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4); }
+.btn-gold:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(255, 215, 0, 0.6); }
+.btn-deep { background: var(--deep-purple); color: #fff; }
+.btn-large { width: 100%; font-size: 1.1rem; }
+.btn-sm { padding: 10px 20px; border-radius: 10px; font-size: 0.8rem; }
+
+/* PRICE CARD */
+.price-card { position: sticky; top: 40px; border-top: 5px solid var(--gold); }
+.price-item { display: flex; justify-content: space-between; margin-bottom: 10px; font-weight: 500; color: #666; }
+.price-total { display: flex; justify-content: space-between; font-size: 1.5rem; font-weight: 800; color: var(--deep-purple); margin-top: 15px; }
+.promo-section { display: flex; gap: 10px; }
+.promo-section input { flex: 1; padding: 10px; border-radius: 10px; border: 1px solid #ddd; }
+.promo-row { color: var(--leaf-green); font-weight: 700; }
+
+/* SECURITY BADGES */
+.security-card { display: flex; flex-direction: column; gap: 10px; }
+.badge-item { background: #fff; padding: 10px 20px; border-radius: 10px; border-left: 3px solid var(--leaf-green); font-weight: 600; font-size: 0.85rem; }
+
+/* POPUP */
+.popup-overlay { position: fixed; inset: 0; background: rgba(45, 11, 89, 0.9); z-index: 100; display: none; align-items: center; justify-content: center; padding: 20px; }
+.popup-overlay.active { display: flex; }
+.popup-content { max-width: 500px; width: 100%; text-align: center; }
+.check-icon { width: 80px; height: 80px; background: var(--gold); color: var(--deep-purple); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; font-size: 2.5rem; font-weight: bold; }
+.summary-box { text-align: left; background: rgba(0,0,0,0.05); padding: 20px; border-radius: 15px; line-height: 1.8; }
+
+/* FOOTER */
+.footer-booking { background: var(--deep-purple); color: #fff; padding: 40px 0; }
+.footer-booking span { color: var(--gold); }
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .booking-grid { grid-template-columns: 1fr; }
+    .price-card { position: static; }
+}
+@media (max-width: 768px) {
+    .input-grid { grid-template-columns: 1fr; }
+    .hero-title { font-size: 2.5rem; }
+}
