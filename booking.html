@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking | Wonderful Gorontalo</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@700;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/booking.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/navbar.css">
+
+</head>
+<body>
+
+<div id="navbar-container"></div>
+
+    <section class="hero-booking">
+        <div class="hero-overlay"></div>
+        <div class="hero-content reveal-load">
+            <span class="tagline">Wonderful Gorontalo - The Heart of Sulawesi</span>
+            <h1 class="hero-title">Book Your Dream Journey</h1>
+            <p class="hero-subtitle">Reserve tours, stays, transport, and unforgettable experiences in Gorontalo.</p>
+            <div class="hero-btns">
+                <button class="btn btn-gold smooth-scroll" data-target="#booking-main">Start Booking</button>
+            </div>
+        </div>
+        <div class="scroll-indicator"><div class="mouse"></div></div>
+    </section>
+
+    <section id="booking-main" class="section-padding bg-pattern">
+        <div class="container">
+            <div class="booking-grid">
+                
+                <div class="booking-form-wrapper glass-card reveal">
+                    <h2 class="section-title">Reservation Form</h2>
+                    <form id="reservationForm">
+                        
+                        <div class="form-group-title">Personal Information</div>
+                        <div class="input-grid">
+                            <div class="input-group">
+                                <label>Full Name</label>
+                                <input type="text" id="fullName" required placeholder="Enter your full name">
+                            </div>
+                            <div class="input-group">
+                                <label>Email Address</label>
+                                <input type="email" id="email" required placeholder="name@example.com">
+                            </div>
+                            <div class="input-group">
+                                <label>Phone Number</label>
+                                <input type="tel" id="phone" required placeholder="+62 812...">
+                            </div>
+                            <div class="input-group">
+                                <label>Country</label>
+                                <input type="text" id="country" required placeholder="Your country">
+                            </div>
+                        </div>
+
+                        <div class="form-group-title">Booking Details</div>
+                        <div class="input-grid">
+                            <div class="input-group">
+                                <label>Service Type</label>
+                                <select id="serviceType" required>
+                                    <option value="tour">Tour Package</option>
+                                    <option value="hotel">Hotel Stay</option>
+                                    <option value="transfer">Airport Transfer</option>
+                                    <option value="island">Island Trip</option>
+                                    <option value="culinary">Culinary Tour</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label>Destination</label>
+                                <select id="destination" required>
+                                    <option value="saronde">Pulau Saronde</option>
+                                    <option value="otanaha">Benteng Otanaha</option>
+                                    <option value="whale">Whale Shark</option>
+                                    <option value="lombongo">Air Terjun Lombongo</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label>Check-in Date</label>
+                                <input type="date" id="checkIn" required>
+                            </div>
+                            <div class="input-group">
+                                <label>Check-out Date</label>
+                                <input type="date" id="checkOut" required>
+                            </div>
+                            <div class="input-group">
+                                <label>Adults</label>
+                                <input type="number" id="adults" min="1" value="1">
+                            </div>
+                            <div class="input-group">
+                                <label>Children</label>
+                                <input type="number" id="children" min="0" value="0">
+                            </div>
+                            <div class="input-group">
+                                <label>Accommodation</label>
+                                <select id="accommodation" required>
+                                    <option value="budget">Budget</option>
+                                    <option value="standard" selected>Standard</option>
+                                    <option value="premium">Premium</option>
+                                    <option value="luxury">Luxury</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="input-group full-width">
+                            <label>Additional Notes</label>
+                            <textarea id="notes" rows="3" placeholder="Any special requests or allergies?"></textarea>
+                        </div>
+
+                        <div class="form-group-title">Preferred Payment Method</div>
+                        <div class="payment-grid">
+                            <label class="payment-option">
+                                <input type="radio" name="payment" value="Bank Transfer" checked>
+                                <span class="pay-box">🏦 Bank Transfer</span>
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="payment" value="Credit Card">
+                                <span class="pay-box">💳 Credit Card</span>
+                            </label>
+                            <label class="payment-option">
+                                <input type="radio" name="payment" value="e-Wallet">
+                                <span class="pay-box">📱 e-Wallet</span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-gold btn-large mt-30">Confirm Booking</button>
+                    </form>
+                </div>
+
+                <div class="booking-side">
+                    <div class="price-card glass-card reveal">
+                        <h3 class="card-title">Instant Price Estimate</h3>
+                        <div class="price-item">
+                            <span>Base Service Cost</span>
+                            <span id="basePrice">$0</span>
+                        </div>
+                        <div class="price-item">
+                            <span>Accommodation</span>
+                            <span id="accomPrice">$0</span>
+                        </div>
+                        <div class="price-item">
+                            <span>Tax (10%)</span>
+                            <span id="taxPrice">$0</span>
+                        </div>
+                        <div class="price-item promo-row hidden" id="promoRow">
+                            <span>Promo Discount (10%)</span>
+                            <span id="promoDiscount">-$0</span>
+                        </div>
+                        <hr>
+                        <div class="price-total">
+                            <span>Grand Total</span>
+                            <span id="totalPrice">$0</span>
+                        </div>
+                        
+                        <div class="promo-section mt-20">
+                            <input type="text" id="promoCode" placeholder="Enter Promo Code">
+                            <button id="applyPromo" class="btn-sm btn-deep">Apply</button>
+                        </div>
+                    </div>
+
+                    <div class="security-card reveal mt-20">
+                        <div class="badge-item">🛡️ Secure SSL</div>
+                        <div class="badge-item">🔒 Privacy Protected</div>
+                        <div class="badge-item">✅ Trusted System</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="successPopup" class="popup-overlay">
+        <div class="popup-content glass-card">
+            <div class="check-icon">✓</div>
+            <h2>Booking Request Sent!</h2>
+            <p>Your journey to Gorontalo is one step away.</p>
+            <div id="bookingSummary" class="summary-box mt-20"></div>
+            <button id="closePopup" class="btn btn-deep mt-20">Close Preview</button>
+        </div>
+    </div>
+
+
+    <div id="footer-container"></div>
+    <script src="js/booking.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/navbar.js"></script>
+</body>
+</html>
