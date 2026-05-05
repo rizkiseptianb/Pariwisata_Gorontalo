@@ -132,4 +132,4 @@ if (startBookingBtn && targetSection) {
             block: 'start'      // Berhenti di bagian atas elemen
         });
     });
-}
+            }
